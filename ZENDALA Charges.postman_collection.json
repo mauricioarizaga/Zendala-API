@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "97e5dcbe-22af-4b9d-827a-18b82c49da52",
+		"name": "ZENDALA Charges",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Charge",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"method\" : \"store\",\n   \"amount\" : 100,\n   \"description\" : \"Cargo con tienda\"  \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/charges",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"charges"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todos los cargos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/charges",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"charges"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar un Cargo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/charges/02798b42-21be-4b26-b361-ab2ae9e1cdcf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"charges",
+						"02798b42-21be-4b26-b361-ab2ae9e1cdcf"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

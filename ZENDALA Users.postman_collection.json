@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "51c8d3c3-b044-4192-85ea-440b177f8ab9",
+		"name": "ZENDALA Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"1userTest@me.com\",\n    \"password\": \"name\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkZjgzNjA4LWI0MTUtNDczYi04ZWE3LTRkN2U1OTUwZmUyMyIsImlhdCI6MTYyMTA1NTYzNCwiZXhwIjoxNjIxMDU1NzE4fQ.vdxW525-CviIZ7PMu9kpb-Kyo7Yu75jtEG7gqfm8PbY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"password\":\"catrastrofico\",\n   \"role\":\"ADMIN_ROLE\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/users/5df83608-b415-473b-8ea7-4d7e5950fe23",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"5df83608-b415-473b-8ea7-4d7e5950fe23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIsta un User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkZjgzNjA4LWI0MTUtNDczYi04ZWE3LTRkN2U1OTUwZmUyMyIsImlhdCI6MTYyMTA1NTYzNCwiZXhwIjoxNjIxMDU1NzE4fQ.vdxW525-CviIZ7PMu9kpb-Kyo7Yu75jtEG7gqfm8PbY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/api/users/5df83608-b415-473b-8ea7-4d7e5950fe23",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"5df83608-b415-473b-8ea7-4d7e5950fe23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar un usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkZjgzNjA4LWI0MTUtNDczYi04ZWE3LTRkN2U1OTUwZmUyMyIsImlhdCI6MTYyMTA1NTYzNCwiZXhwIjoxNjIxMDU1NzE4fQ.vdxW525-CviIZ7PMu9kpb-Kyo7Yu75jtEG7gqfm8PbY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/users/21edaf13-759c-41a6-968d-5ea442fd159e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users",
+						"21edaf13-759c-41a6-968d-5ea442fd159e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"1userTest@me.com\",\n    \"password\": \"catrastrofico\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista todos los users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkZjgzNjA4LWI0MTUtNDczYi04ZWE3LTRkN2U1OTUwZmUyMyIsImlhdCI6MTYyMTA1NTc3OCwiZXhwIjoxNjIxMDU1ODYyfQ.k-eLXz73ugnXtXUIP7u85cgaXGmpH4CHjA-HGoVtIlA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
