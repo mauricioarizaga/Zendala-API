@@ -3,4 +3,7 @@
 Mauricio Arizaga
 
 ## Ruta: /documentation - Swagger
-## Se incluye las coleciones creadas en postman
+## Se incluye las colecciones creadas en Postman
+
+## Requiere: 
+Mysql
