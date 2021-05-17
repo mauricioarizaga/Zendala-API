@@ -59,18 +59,7 @@ class CustomerRepository {
             return await Customers.delete({ where: {'id': id}})
     } 
 
-async findByLocation(latitud,longitud,kilometers, amount){
-    let searchResult =  openpay.customers.stores(latitud,longitud,kilometers, amount, async (error, result, ) => {  
-      
-        if(!searchResult){
-           res.json(error)
-            }else {
-           res.json(result)
-            }
-        });
 
-
-}
 
 
 

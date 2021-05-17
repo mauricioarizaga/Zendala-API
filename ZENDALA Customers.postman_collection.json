@@ -135,6 +135,57 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Lista todas las tiendas por geolocalizacion",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/search/stores?latitud=20.618171&longitud=-100.421865&kilometers=1.5&amount=4000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"search",
+						"stores"
+					],
+					"query": [
+						{
+							"key": "latitud",
+							"value": "20.618171"
+						},
+						{
+							"key": "longitud",
+							"value": "-100.421865"
+						},
+						{
+							"key": "kilometers",
+							"value": "1.5"
+						},
+						{
+							"key": "amount",
+							"value": "4000"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

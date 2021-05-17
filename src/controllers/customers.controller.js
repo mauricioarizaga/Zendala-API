@@ -12,8 +12,8 @@ const getAllCustomers = async (req, res, next) => {
 
         logger.info('Query: ' + JSON.stringify(req.query));
 
-        const users = await customerService.findAll();
-        res.json(new Success(users));
+        const customers = await customerService.findAll();
+        res.json(new Success(customers));
         
     } catch (err) {
         next(err);
@@ -89,21 +89,12 @@ const deleteCustomer = async (req, res, next) => {
     }
 };
 
-const getAllStores = async (req, res) => {
-    const { latitud,longitud,kilometers, amount } = req.params
-     try {
-         const store = await customerService.findByLocation(latitud,longitud,kilometers, amount);
-         res.json(new Success(store));
-     } catch (err) {
-         next(err);
-     }
- };
+
 
 module.exports = {
     getAllCustomers,
     createCustomer,
     updateCustomer,
     getById,
-    deleteCustomer,
-    getAllStores
+    deleteCustomer
 }

@@ -18,6 +18,7 @@ class ExpressServer {
         this.basePathAuth = `${config.api.prefix}/auth`;
         this.basePathUsers = `${config.api.prefix}/users`;
         this.basePathCharges = `${config.api.prefix}/charges`;
+        this.basePathSearch = `${config.api.prefix}/search`;
         
         this._middlewares();
         
@@ -51,6 +52,7 @@ class ExpressServer {
         this.app.use(this.basePathAuth, require('../../routes/auth.js'));
         this.app.use(this.basePathUsers, require('../../routes/users.js'));
         this.app.use(this.basePathCharges, require('../../routes/charges.js'));
+        this.app.use(this.basePathSearch, require('../../routes/search.js'));
     }
 
     _notFound() {

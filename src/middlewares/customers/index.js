@@ -73,7 +73,7 @@ const getAllRequestValidation = [
 const getRequestValidation = [
     validJWT, 
     _idRequied,  
-    _idExist,
+   _idExist,
     validationResult
 ]
 

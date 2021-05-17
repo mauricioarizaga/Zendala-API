@@ -5,7 +5,6 @@ const {
     updateCustomer, 
     getById, 
     deleteCustomer,
-    getAllStores
 } = require('../controllers/customers.controller');
 const { 
     postRequestValidations,
@@ -23,7 +22,7 @@ router.post('/', postRequestValidations, createCustomer);
 router.put('/:id', putRequestValidations, updateCustomer);
 router.get('/:id', getRequestValidation, getById);
 router.delete('/:id', deleteRequestValidations, deleteCustomer);
-router.get('/stores', getAllStores);
+
 
 
 
