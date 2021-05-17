@@ -18,18 +18,18 @@ const _idExistCharge = check('id').custom(
 );
 
 const postRequestValidations = [
-//    validJWT,
+
     _method,
     _amount,
     _description,
     validationResult
 ]
 const getAllRequestValidation = [
-//    validJWT
+
 ]
 
 const getRequestValidation = [
-//     validJWT,
+
     _idRequired,  
     _idExistCharge,
     validationResult
